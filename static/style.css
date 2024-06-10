@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans';
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  background: rgb(2, 0, 36);
+}
+
+.top {
+  height: 100px;
+  background: rgb(2, 0, 36);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.body {
+  display: flex;
+}
+
+.left {
+  width: 20%;
+  height: 86.8vh;
+  padding: 0 20px 20px 20px;
+  background: rgb(2, 0, 36);
+  display: flex;
+  flex-direction: column;
+}
+
+.left button {
+  background-color: rgb(0 52 75);
+}
+
+label {
+  background: white;
+  border-radius: 5px 5px 0 0;
+  padding: 4px;
+  width: max-content;
+  cursor: pointer;
+  width: 15.25px;
+}
+
+.right {
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgb(0 52 75) 0%, rgb(0 172 172) 60%, rgb(117 187 159) 100%);
+}
+
+#uploadform div {
+  display: flex;
+  font-size: 14px;
+  height: 24px;
+}
+
+span#file-chosen {
+  width: 100%;
+  cursor: default;
+  border-bottom: 0.5px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+
+button {
+  border: 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  background: rgb(2, 0, 36);
+  cursor: pointer;
+}
+
+.file,
+.folder {
+  min-width: 100px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 20px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+.file:hover,
+.folder:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.file a,
+.file p,
+.folder a {
+  user-select: none;
+  color: indigo;
+  font-size: 18px;
+  padding: 3px 3px 0 3px;
+}
+
+.file div a:first-of-type,
+.folder a:first-of-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.247);
+  padding: 20px;
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+}
+
+dialog div {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+  margin-top: 60px;
+}
+
+dialog div button {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+input[type='text'] {
+  width: 163px;
+  height: 25px;
+  font-size: 21px;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.file button,
+.folder button {
+  margin: 0 2px 0 0;
+  width: min-content;
+  height: 10px;
+  color: indigo;
+  padding: 5px 1.5px 0 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.file i,
+.folder i {
+  padding: 2px 4px !important;
+  font-size: 40px;
+  height: 40px;
+}
+
+#dfiles,
+#folders {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type='file'] {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  color: white;
+}
+
+.flex-max {
+  display: flex;
+  justify-content: space-between;
+}
+
+.path {
+  cursor: default;
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.path * {
+  color: white;
+  font-size: 25px;
+}
+
+.small-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.small-btns button {
+  padding: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.scrollable {
+  overflow-y: scroll;
+  height: 84vh;
+}
+
+.editor-top {
+  font-size: 18px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 0 0 0;
+}
+
+.filters-display {
+  position: relative;
+  left: -200%;
+  display: flex;
+  flex-direction: column;
+}
+.here {
+  left: 0;
+}
+.filters-display div {
+  align-self: center;
+  text-align: center;
+  background-color: rgb(0 52 75);
+  margin: 5px 10px;
+  border-radius: 10px;
+}
+.filters-display div img {
+  border-radius: 10px;
+  cursor: pointer;
+}
+#main-image-div {
+  border: 2px dashed white;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#saveImg,
+.addfile-container {
+  width: calc(100% / 3);
+  margin: 20px 0 20px 20px;
+}

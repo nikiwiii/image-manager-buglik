@@ -1,0 +1,19 @@
+<div class="body">
+    <div class="left">
+        <div class="filters-display here">
+        {{#each effects}}
+            <div>
+                <p style="color: rgb(136, 136, 136); filter:{{name}}(100%); font-size: 30px; cursor: pointer; width: 200px" class="lil-imgs">{{name}}</p>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+    <div class="right" style="padding: 0">
+        <p style="color: white">{{path}}</p>
+        <div class="img-container">
+            <img src="data:image/{{format}};base64, {{base64}}" id="main-image-div">
+        </div>
+        <div class="small-btns" style="flex-direction: row">
+            <button id='saveImg'>Zapisz</button>
+        </div>
+    </div>
