@@ -26,7 +26,6 @@ body {
 }
 
 .left {
-  width: 20%;
   height: 86.8vh;
   padding: 0 20px 20px 20px;
   background: rgb(2, 0, 36);
@@ -40,11 +39,9 @@ body {
 
 label {
   background: white;
-  border-radius: 5px 5px 0 0;
-  padding: 4px;
-  width: max-content;
+  border-radius: 5px 5px 0 5px;
+  padding: 15px 10px;
   cursor: pointer;
-  width: 15.25px;
 }
 
 .right {
@@ -59,11 +56,11 @@ label {
 #uploadform div {
   display: flex;
   font-size: 14px;
-  height: 24px;
 }
 
 span#file-chosen {
-  width: 100%;
+  padding: 5px;
+  width: 125px;
   cursor: default;
   border-bottom: 0.5px solid white;
   white-space: nowrap;
@@ -72,7 +69,6 @@ span#file-chosen {
   color: white;
   display: flex;
   align-items: center;
-  padding-left: 4px;
 }
 
 button {
@@ -111,7 +107,7 @@ button:hover {
 .file p,
 .folder a {
   user-select: none;
-  color: indigo;
+  color: black;
   font-size: 18px;
   padding: 3px 3px 0 3px;
 }
@@ -165,7 +161,7 @@ input[type='text'] {
   margin: 0 2px 0 0;
   width: min-content;
   height: 10px;
-  color: indigo;
+  color: black;
   padding: 5px 1.5px 0 0;
   background: transparent;
   cursor: pointer;
@@ -263,4 +259,7 @@ input[type='file'] {
 .addfile-container {
   width: calc(100% / 3);
   margin: 20px 0 20px 20px;
+}
+dialog form div * {
+  margin: 2px;
 }

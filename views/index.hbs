@@ -1,16 +1,16 @@
 <div class="body">
     <div class="left">
-        <button id="addfolder">Nowy katalog</button>
+        <button id="addfolder"><i class="fa-solid fa-folder-plus" style="font-size: 30px;"></i></button>
         {{#if nonuploadfolder}}
-        <button id="newnamebtn">Zmień nazwę obecnego katalogu</button>
+        <button id="newnamebtn"><i class="fa-solid fa-pen-to-square" style="font-size: 30px"></i></button>
         {{/if}}
         <form action="/uploadf" method="post" class="right" style="padding: 0;background: transparent" id="uploadform" enctype="multipart/form-data">
             <div>
-                <input accept="image/*" type="file" name="filefold" id="file-upload" hidden>
-                <label for="file-upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></label>
+                <input accept="image/png, image/jpeg" type="file" name="filefold" id="file-upload" hidden>
+                <label for="file-upload"><i class="fa-solid fa-cloud-arrow-down" style="font-size: 30px;"></i></label>
                 <span id="file-chosen">Nie wybrano pliku</span>
+                <button id="upload" style="border-radius: 10px 10px 10px 0; margin: 0" type="button"><i class="fa-solid fa-upload" style="font-size: 30px;"></i></button>
             </div>
-            <button id="upload" style="border-radius: 0 0 10px 10px;" type="button">Wrzuć</button>
         </form>
     </div>
     <div class="right" style="overflow-y: scroll">

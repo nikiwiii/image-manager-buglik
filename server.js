@@ -30,13 +30,15 @@ const segregate = () => {
         path: currentPath.substr(9, currentPath.length).replaceAll('/', '~') + e, //query zachowa path z '~' zamiast '/'
       });
     } else {
+      const format = e.substr(e.lastIndexOf('.')+1, e.length)
+      format == "jpg" || format == "jpeg" || format == "png" ?
       files.push({
         name: e.substr(0, e.lastIndexOf('.')),
         format: e.substr(e.lastIndexOf('.'), e.length),
         type: false,
         fullname: e,
         path: currentPath.substr(9, currentPath.length).replaceAll('/', '~') + e,
-      });
+      }) : null;
     }
   });
   return [folders, files];
