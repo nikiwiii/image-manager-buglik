@@ -41,7 +41,7 @@ if (mainImageDiv) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        newImg: dataUrl,
+        newImg: dataUrl
       }),
     });
     const res = await response.json();
@@ -77,7 +77,7 @@ if (mainImageDiv) {
     dialog.close();
   });
   btn1.addEventListener('click', () => {
-    $('#dialogtext').innerHTML = 'nazwa nowego folderu:';
+    $('#dialogtext').innerHTML = 'nazwa nowego katalogu:';
     dialog.showModal();
   });
   function logdelete(event) {

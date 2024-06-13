@@ -5,9 +5,12 @@ const path = require('path');
 const app = express();
 const multer = require('multer');
 const port = 4000;
+const bodyParser = require('body-parser')
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.engine(
   'hbs',
   hbs.engine({
@@ -193,12 +196,12 @@ app.post('/sendChanged', (req, res) => {
 
 app.post('/imageSaved', (req, res) => {
   console.log("zapisuję");
-  const img64 = req.body.newImg.substr(22, req.body.newImg.length);
-  console.log(img64.substr(0, 10));
+  console.log(req.body);
+  const img64 = req.body.newImg.substring(22, req.body.newImg.length);
   fs.writeFile(currentFile, img64, {
     encoding: 'base64'
   }, (err) => {
-    console.log(err);
+    if (err) console.log(err);
   });
   res.send(JSON.stringify('zapisano obraz'));
 });
